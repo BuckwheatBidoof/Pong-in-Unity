@@ -15,11 +15,11 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
+        if(Input.GetKey(KeyCode.W)) {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
 
-        if(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+        if(Input.GetKey(KeyCode.S)) {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
     }
