@@ -19,6 +19,14 @@ public class PlayScript : MonoBehaviour
     }
   }
 
+  void Update()
+  {
+    if (Input.GetKey("escape"))
+    {
+      Application.Quit();
+    }
+  }
+
   public void startNewGame()
   {
     SceneManager.LoadScene("Game");

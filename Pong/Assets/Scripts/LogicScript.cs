@@ -13,6 +13,14 @@ public class LogicScript : MonoBehaviour
   public AudioSource score;
   public GameObject ball;
   private Rigidbody2D rb;
+  void Update()
+  {
+    if (Input.GetKey("escape"))
+    {
+      Application.Quit();
+    }
+  }
+
   public void addScore(int player)
   {
     if (player == 0)

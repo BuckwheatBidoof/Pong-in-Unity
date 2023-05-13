@@ -5,7 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class StartScript : MonoBehaviour
 {
-    public void startGame() {
-        SceneManager.LoadScene("Game");
+  void Update()
+  {
+    if (Input.GetKey("escape"))
+    {
+      Application.Quit();
     }
+  }
+  public void startGame()
+  {
+    SceneManager.LoadScene("Game");
+  }
 }
