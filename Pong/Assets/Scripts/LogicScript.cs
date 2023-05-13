@@ -8,8 +8,8 @@ public class LogicScript : MonoBehaviour
 {
   public Text leftScore;
   public Text rightScore;
-  private int playerScore = 0;
-  private int enemyScore = 0;
+  public static int playerScore = 0;
+  public static int enemyScore = 0;
   public AudioSource score;
   public GameObject ball;
   private Rigidbody2D rb;
@@ -35,13 +35,9 @@ public class LogicScript : MonoBehaviour
 
     ball.transform.position = new Vector2(0, 0);
 
-    if (playerScore == 10)
+    if (playerScore == 10 || enemyScore == 10)
     {
-
-    }
-    else if (enemyScore == 10)
-    {
-
+      SceneManager.LoadScene("Game Over");
     }
 
   }
