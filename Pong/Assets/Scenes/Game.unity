@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 850325067}
   m_Layer: 3
   m_Name: blockRight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -904,6 +904,8 @@ MonoBehaviour:
   paddle: {fileID: 1606073978}
   wall: {fileID: 1606073977}
   logicSystem: {fileID: 1108028871}
+  leftPaddle: {fileID: 2147186664}
+  rightPaddle: {fileID: 850325062}
 --- !u!50 &1606073974
 Rigidbody2D:
   serializedVersion: 4
@@ -1424,7 +1426,7 @@ GameObject:
   - component: {fileID: 2147186669}
   m_Layer: 3
   m_Name: blockLeft
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
