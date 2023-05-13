@@ -43,7 +43,6 @@ public class ballScript : MonoBehaviour
       startOfRound = true;
     }
 
-    Debug.Log("rb.velocity: " + rb.velocity);
     if (rb.velocity.magnitude > topSpeed)
     {
       rb.velocity = Vector2.ClampMagnitude(rb.velocity, topSpeed);
@@ -81,7 +80,6 @@ public class ballScript : MonoBehaviour
     {
       paddle.Play();
       speed *= 1.5f;
-      Debug.Log("Speed: " + speed);
       if (collision.gameObject.tag == "Player")
       {
         direction = new Vector2(speed, rb.velocity.y * rbl.velocity.y * 2);
