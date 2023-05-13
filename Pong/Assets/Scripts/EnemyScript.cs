@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    public float speed = 5;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  public float speed = 5;
+  private Rigidbody2D rb;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKey(KeyCode.UpArrow)) {
-            transform.position += Vector3.up * speed * Time.deltaTime;
-        }
+  // Start is called before the first frame update
+  void Start()
+  {
+    rb = GetComponent<Rigidbody2D>();
+  }
 
-        if(Input.GetKey(KeyCode.DownArrow)) {
-            transform.position += Vector3.down * speed * Time.deltaTime;
-        }
+  // Update is called once per frame
+  void Update()
+  {
+    if (Input.GetKey(KeyCode.UpArrow))
+    {
+      rb.velocity = new Vector2(0.0f, speed);
     }
+    else if (Input.GetKey(KeyCode.DownArrow))
+    {
+      rb.velocity = new Vector2(0.0f, -speed);
+    }
+    else
+    {
+      rb.velocity = Vector2.zero;
+    }
+  }
 }
